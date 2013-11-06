@@ -34,19 +34,16 @@ class LuhnTest < MiniTest::Unit::TestCase
   end
 
   def test_create_valid_number
-    skip
     number = Luhn.create(123)
     assert_equal 1230, number
   end
 
   def test_create_other_valid_number
-    skip
     number = Luhn.create(873956)
     assert_equal 8739567, number
   end
 
   def test_create_yet_another_valid_number
-    skip
     number = Luhn.create(837263756)
     assert_equal 8372637564, number
   end
