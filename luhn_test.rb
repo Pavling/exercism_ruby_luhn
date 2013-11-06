@@ -9,7 +9,6 @@ class LuhnTest < MiniTest::Unit::TestCase
   end
 
   def test_too_large_addend
-    skip
     luhn = Luhn.new(8631)
     assert_equal [7, 6, 6, 1], luhn.addends
   end
