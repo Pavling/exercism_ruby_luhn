@@ -13,6 +13,10 @@ class Luhn
     addends.reduce(:+)
   end
 
+  def valid?
+    checksum % 10 == 0
+  end
+
   private
   def lunh_transform(digit, index)
     index % 2 == 0 ? digit : doubled_digit_transform(digit)

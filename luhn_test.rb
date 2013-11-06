@@ -24,13 +24,11 @@ class LuhnTest < MiniTest::Unit::TestCase
   end
 
   def test_invalid_number
-    skip
     luhn = Luhn.new(738)
     assert !luhn.valid?
   end
 
   def test_valid_number
-    skip
     luhn = Luhn.new(8739567)
     assert luhn.valid?
   end
