@@ -14,13 +14,11 @@ class LuhnTest < MiniTest::Unit::TestCase
   end
 
   def test_checksum
-    skip
     luhn = Luhn.new(4913)
     assert_equal 22, luhn.checksum
   end
 
   def test_checksum_again
-    skip
     luhn = Luhn.new(201773)
     assert_equal 21, luhn.checksum
   end

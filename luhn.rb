@@ -9,6 +9,10 @@ class Luhn
     end.reverse
   end
 
+  def checksum
+    addends.reduce(:+)
+  end
+
   private
   def lunh_transform(digit, index)
     index % 2 == 0 ? digit : doubled_digit_transform(digit)
